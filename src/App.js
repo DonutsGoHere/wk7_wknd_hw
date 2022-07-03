@@ -11,7 +11,10 @@ function App() {
   ]
 
   return (
-    <MemeContainer themes={themes}/>
+    <>
+      <h1>The Meme Machine</h1>
+      <MemeContainer themes={themes}/>
+    </>
   );
 };
 

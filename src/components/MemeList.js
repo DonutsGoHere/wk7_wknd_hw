@@ -11,7 +11,7 @@ const MemeList = ({memes}) => {
     <div className="MemeList">
       {memes.map((meme, index) => {
         if (meme.data.over_18 === true) {
-          return <p key={meme.data.id}>NSFW</p>
+          return <p className="Over_18" key={meme.data.id}>NSFW</p>
         }
       return (
         <Meme
