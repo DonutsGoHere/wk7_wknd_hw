@@ -1,14 +1,14 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 
-function Meme({ title, artist, image }){
+function Meme({ title, place, artist, image }){
   
   return (
-    <>
-      <h3> - {title} - </h3>
-      <img src={image} alt={'eh?'} />
+    <div className="Meme">
+      <h2> - {title} - </h2>
+      <img src={image} alt={'Whoops, I dunno what\'s happened. CORB somethin? yup cheers!'} />
       <p>by: {artist}</p>
-    </>
-  )
-}
+    </div>
+  );
+};
 
 export default Meme;

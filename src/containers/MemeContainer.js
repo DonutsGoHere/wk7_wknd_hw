@@ -1,11 +1,14 @@
 import React, {useState, useEffect} from "react";
 import MemeList from "../components/MemeList";
-import Meme from "../components/Meme";
+import MemeSelect from "../components/MemeSelect";
 
 
-const MemeContainer = ({ memeTheme }) => {
+const MemeContainer = ({ themes }) => {
   const [memes, setMemes] = useState([]);
 
+  useEffect(() => {
+    getMemes(themes[0].url)
+  }, [themes])
 
   const getMemes = url => {
     fetch(url)
@@ -13,14 +16,17 @@ const MemeContainer = ({ memeTheme }) => {
       .then(memesData => setMemes(memesData.data.children))
   }
 
-  useEffect(() => {getMemes(memeTheme[0].url)}, [memeTheme])
+  const handleMemeTheme = evt => {
+    getMemes(evt.target.value);
+  }
 
   return (
     <>
-      <h1>Container</h1>
-      <MemeList memes={memes} url={memeTheme[0].url}/>
+      <MemeSelect handleMemeTheme={handleMemeTheme} themes={themes}/>
+      <MemeList memes={memes} url={themes[0].url} handleMemeTheme={handleMemeTheme}/>
     </>
   );
 
-}
+};
+
 export default MemeContainer;

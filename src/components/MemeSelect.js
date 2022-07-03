@@ -1,17 +1,17 @@
 import React from "react";
 
-function MemeSelect ({handleChange}){
-  
-  function onChange(evt){
-    if(evt.target.value === '')
-    console.log(evt.target.value);
-    handleChange(evt.target.value);
-  }
+const MemeSelect = ({handleMemeTheme, themes}) => {
 
   return (
-  <label>
-    Meme choice<input onChange={onChange} type='number'/>
-  </label>
-  )
-}
+    <div className="MemeSelect">
+      <h1>Meme Themes</h1>
+      <select onChange={handleMemeTheme}>
+        {themes.map(theme => {
+          return( <option key={theme.name} value={theme.url}>{theme.name}</option>)
+        })}
+      </select>
+    </div>
+  );
+};
+
 export default MemeSelect;
