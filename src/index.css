@@ -15,17 +15,17 @@ code {
 }
 
 .Meme {
-  margin: 10px;
-  width: auto;
-  outline-style: double;
+  display: grid;
+  justify-content: space-around;
   align-items: center;
+  margin: 10px;
+  outline-style: double;
 }
 
 .Memeimg{
   margin: auto;
-  width: 700px;
-  height: 400px;
-  border: 1px solid, black;
+  width: 90%;
+  height: 90%;
   text-align: center;
   padding: 15px;
 }
