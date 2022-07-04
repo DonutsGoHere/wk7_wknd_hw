@@ -1,8 +1,13 @@
 body {
   margin: 10%;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  background-color: white;
+  background-color: rgb(87, 87, 87);
 }
+
+h2 {
+  color: dodgerblue;
+}
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -20,6 +25,7 @@ code {
   align-items: center;
   margin: 10px;
   outline-style: double;
+  background-color: gray;
 }
 
 .Memeimg{
@@ -29,8 +35,15 @@ code {
   text-align: center;
   padding: 15px;
 }
+
 .Over_18 {
   outline-style: dashed;
   outline-color: crimson;
+  display: none;
+}
 
+.MemeTitle{
+  padding: 5px;
+  margin: auto;
+  color: whitesmoke
 }
